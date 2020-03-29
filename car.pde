@@ -335,7 +335,47 @@ var xe3_vacham = function () {
   ellipse (xe3_x + 50, xe3_y - 50, 30, 30);
 };
 
-
+  //VẼ XE
+var drawCar1 = function () {
+  // Start red car xe1
+    // draw the red car body
+  fill(255, 0, 115);
+  rect(xe1_x, xe1_y, w_than_xe1, h_than_xe1); //thân xe
+  rect(xe1_x + x_dau_xe1, xe1_y-h_dau_xe1 + 2, w_dau_xe1, h_dau_xe1); //đầu xe
+  text ("1", xe1_x + 2,xe1_y - 2);
+  // draw the red car wheels
+  fill(255, 255, 255);
+  ellipse(xe1_x + x_banh_trai_xe1, (xe1_y + h_than_xe1 + 0.05 * h_than_xe1), w_banh_xe1, w_banh_xe1); //bánh trái
+  ellipse(xe1_x + x_banh_phai_xe1, (xe1_y + h_than_xe1 + 0.05 * h_than_xe1), w_banh_xe1, w_banh_xe1); // bánh phải
+  // End red car
+};
+var drawCar2 = function () {
+  // Start blue car xe2
+    // draw the blue car body
+  fill(0, 51, 255);
+  rect(xe2_x, xe2_y, w_than_xe2, h_than_xe2); //thân xe
+  rect(xe2_x + x_dau_xe2, xe2_y-h_dau_xe2 + 2, w_dau_xe2, h_dau_xe2); //đầu xe
+  text ("2", xe2_x + 2,xe2_y - 2);
+  // draw the red car wheels
+  // draw the blue car wheels
+  fill(0, 0, 0);
+  ellipse(xe2_x + x_banh_trai_xe2,(xe2_y + h_than_xe2 + 0.05 * h_than_xe2), w_banh_xe2, w_banh_xe2); //bánh trái
+  ellipse(xe2_x + x_banh_phai_xe2,(xe2_y + h_than_xe2 + 0.05 * h_than_xe2), w_banh_xe2, w_banh_xe2); // bánh phải
+  // End blue car
+};
+var drawCar3 = function () {
+  // Start yellow car xe3
+    // draw the yellow car body
+  fill(255, 255, 0);
+  rect(xe3_x, xe3_y, w_than_xe3, h_than_xe3); //thân xe
+  rect(xe3_x + x_dau_xe3, xe3_y-h_dau_xe3 + 2, w_dau_xe3, h_dau_xe3); //đầu xe
+  text ("3", xe3_x + 2,xe3_y - 2);
+  // draw the yellow car wheels
+  fill(208, 208, 208);
+  ellipse(xe3_x + x_banh_trai_xe3,(xe3_y + h_than_xe3 + 0.05 * h_than_xe3), w_banh_xe3, w_banh_xe3); //bánh trái
+  ellipse(xe3_x + x_banh_phai_xe3,(xe3_y + h_than_xe3 + 0.05 * h_than_xe3), w_banh_xe3, w_banh_xe3); // bánh phải
+  // End yellow car
+};
 void setup () {
   size(sizeCanvas_x, sizeCanvas_y);
   background(125);
@@ -433,45 +473,9 @@ draw = function() {
     veBuiCay(); //Vẽ bụi cây
       // stroke(126);
       // veToaDo();
-
-      //VẼ XE
-      // Start red car xe1
-        // draw the red car body
-      fill(255, 0, 115);
-      rect(xe1_x, xe1_y, w_than_xe1, h_than_xe1); //thân xe
-      rect(xe1_x + x_dau_xe1, xe1_y-h_dau_xe1 + 2, w_dau_xe1, h_dau_xe1); //đầu xe
-      text ("1", xe1_x + 2,xe1_y - 2);
-      // draw the red car wheels
-      fill(255, 255, 255);
-      ellipse(xe1_x + x_banh_trai_xe1, (xe1_y + h_than_xe1 + 0.05 * h_than_xe1), w_banh_xe1, w_banh_xe1); //bánh trái
-      ellipse(xe1_x + x_banh_phai_xe1, (xe1_y + h_than_xe1 + 0.05 * h_than_xe1), w_banh_xe1, w_banh_xe1); // bánh phải
-      // End red car
-
-      // Start blue car xe2
-        // draw the blue car body
-      fill(0, 51, 255);
-      rect(xe2_x, xe2_y, w_than_xe2, h_than_xe2); //thân xe
-      rect(xe2_x + x_dau_xe2, xe2_y-h_dau_xe2 + 2, w_dau_xe2, h_dau_xe2); //đầu xe
-      text ("2", xe2_x + 2,xe2_y - 2);
-      // draw the red car wheels
-      // draw the blue car wheels
-      fill(0, 0, 0);
-      ellipse(xe2_x + x_banh_trai_xe2,(xe2_y + h_than_xe2 + 0.05 * h_than_xe2), w_banh_xe2, w_banh_xe2); //bánh trái
-      ellipse(xe2_x + x_banh_phai_xe2,(xe2_y + h_than_xe2 + 0.05 * h_than_xe2), w_banh_xe2, w_banh_xe2); // bánh phải
-      // End blue car
-
-      // Start yellow car xe3
-        // draw the yellow car body
-      fill(255, 255, 0);
-      rect(xe3_x, xe3_y, w_than_xe3, h_than_xe3); //thân xe
-      rect(xe3_x + x_dau_xe3, xe3_y-h_dau_xe3 + 2, w_dau_xe3, h_dau_xe3); //đầu xe
-      text ("3", xe3_x + 2,xe3_y - 2);
-      // draw the yellow car wheels
-      fill(208, 208, 208);
-      ellipse(xe3_x + x_banh_trai_xe3,(xe3_y + h_than_xe3 + 0.05 * h_than_xe3), w_banh_xe3, w_banh_xe3); //bánh trái
-      ellipse(xe3_x + x_banh_phai_xe3,(xe3_y + h_than_xe3 + 0.05 * h_than_xe3), w_banh_xe3, w_banh_xe3); // bánh phải
-      // End yellow car
-
+    drawCar1();
+    drawCar2();
+    drawCar3();
 //------------------------------------- XỬ LÝ VA CHAM--------------------------------------//
 
       // Xử lý với xe 1 - đối với xe 2
