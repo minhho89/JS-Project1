@@ -1,6 +1,6 @@
 
   //Setup vẽ size Canvas & độ lớn đường đua
-  var sizeCanvas_x = 1200;
+  var sizeCanvas_x = 1500;
   var sizeCanvas_y = 900;
   var sizeRideWay = 450;
 
