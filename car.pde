@@ -1,6 +1,6 @@
 
   //Setup vẽ size Canvas & độ lớn đường đua
-  var sizeCanvas_x = 900;
+  var sizeCanvas_x = 1200;
   var sizeCanvas_y = 900;
   var sizeRideWay = 450;
 
@@ -231,7 +231,7 @@
     }
   //End Vạch Caro kết thúc
     // Xử lý các biến hiện bảng thông báo
-    var bangThongBao_w = 400;
+    var bangThongBao_w = 800;
     var bangThongBao_h = 100;
     var bangThongBao_x = sizeCanvas_x / 2 - bangThongBao_w / 2;
     var bangThongBao_y = RideWay_y1 * 1/3;
@@ -241,18 +241,20 @@
       fill (255, 153, 51);
       stroke (0, 0, 0);
       rect (bangThongBao_x, bangThongBao_y, bangThongBao_w, bangThongBao_h);
-      textSize (17);
+      textSize (30);
       fill (255, 255, 204);
-      text ("XIN CHÚC MỪNG, XE SỐ " + XeThang + " LÀ NHÀ VÔ ĐỊCH!!", bangThongBao_x + 15, bangThongBao_y + bangThongBao_h / 2);
+      textAlign(CENTER, CENTER);
+      text ("XIN CHÚC MỪNG, XE SỐ " + XeThang + " LÀ NHÀ VÔ ĐỊCH!!", bangThongBao_x + bangThongBao_w / 2, bangThongBao_y + bangThongBao_h / 2);
     }
     // Thông báo 3 xe đều bị loại
     var thongbao_Loai = function () {
       fill (255, 0, 0);
       stroke (0, 0, 0);
       rect (bangThongBao_x, bangThongBao_y, bangThongBao_w, bangThongBao_h);
-      textSize (15);
+      textSize (30);
       fill (255, 255, 0);
-      text ("RẤT TIẾC, CẢ 3 XE ĐỀU BỊ LOẠI KHỎI CUỘC CHƠI.", bangThongBao_x + 17, bangThongBao_y + bangThongBao_h / 2);
+      textAlign(CENTER, CENTER);
+      text ("RẤT TIẾC, CẢ 3 XE ĐỀU BỊ LOẠI KHỎI CUỘC CHƠI.", bangThongBao_x + bangThongBao_w / 2, bangThongBao_y + bangThongBao_h / 2);
     }
 
   // Vẽ lane đường
