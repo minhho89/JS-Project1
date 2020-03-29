@@ -449,33 +449,33 @@ draw = function() {
     veNui();
     veMay();
 
-    // inManHinhThongTin();
       //Mario nhảy
-    image (mario, x_mario, y_mario, w_marrio, h_mario);
-    y_mario += 3 * mario_delta_y;
+        image (mario, x_mario, y_mario, w_marrio, h_mario);
+        y_mario += 3 * mario_delta_y;
 
-    if (y_mario < RideWay_y1 -200 || y_mario > RideWay_y1) {
-    mario_delta_y = -1 * mario_delta_y ;
-    }
+        if (y_mario < RideWay_y1 -200 || y_mario > RideWay_y1) {
+        mario_delta_y = -1 * mario_delta_y ;
+        }
+      //End Mario nhảy
 
     veDuongDua(); //vẽ nền đường đua
     veLanDuong (); // vẽ lane
     veVachCaro(); // vẽ vạch caro xuất phát và về đích
     veCo(); //Vẽ cỏ
+
     //vẽ đá
     i = 0;
     while (i < soluong_rock) {
       image (rock, x_rock_arr[i], y_rock_arr[i], size_rock_arr[i], size_rock_arr[i]);
       i++;
     }
-    //End Mario nhảy
+
     veMepCo(); //Vẽ mép cỏ
     veBuiCay(); //Vẽ bụi cây
-      // stroke(126);
-      // veToaDo();
-    drawCar1();
-    drawCar2();
-    drawCar3();
+
+    drawCar1(); //Vẽ xe1
+    drawCar2(); //Vẽ xe2
+    drawCar3();//Vẽ xe3
 //------------------------------------- XỬ LÝ VA CHAM--------------------------------------//
 
       // Xử lý với xe 1 - đối với xe 2
@@ -733,6 +733,7 @@ draw = function() {
     }
 //End xử lý va chạm với đá
 //------------------END XỬ LÝ VA CHẠM -----------------------------------------------------//
+
 //----------------- XỬ LÝ DI CHUYỂN ------------------------------------------------------//
       //Xe dừng khi tới vạch
       //Xử lý ra kết quả
@@ -740,27 +741,18 @@ draw = function() {
         speedXe1 = 0;
         ChuyenLaneXe1 = 0;
         thongbao_Thang (1);
-        // textSize(15);
-        // fill(255, 0, 0);
-        // text ("XIN CHÚC MỪNG, XE SỐ 1 LÀ NHÀ VÔ ĐỊCH!!", 300, 240);
         noloop();
       }
       if (xe2_x + w_than_xe2 > sizeCanvas_x - 100) {
         speedXe2 = 0;
         ChuyenLaneXe2 = 0;
         thongbao_Thang (2);
-        // textSize(15);
-        // fill(255, 0, 0);
-        // text ("XIN CHÚC MỪNG, XE SỐ 2 LÀ NHÀ VÔ ĐỊCH!!", 300, 240);
         noloop();
       }
       if (xe3_x + w_than_xe3 > sizeCanvas_x - 100) {
         speedXe3 = 0;
         ChuyenLaneXe3 = 0;
         thongbao_Thang (3);
-        // textSize(15);
-        // fill(255, 0, 0);
-        // text ("XIN CHÚC MỪNG, XE SỐ 3 LÀ NHÀ VÔ ĐỊCH!!", 300, 240);
         noloop();
       }
       //End game khi cả 3 xe đêu dừng
