@@ -377,7 +377,7 @@ var drawCar3 = function () {
   // End yellow car
 };
 void setup () {
-  size(sizeCanvas_x, sizeCanvas_y);
+  size(1500, 900);
   background(125);
   //Load hình ảnh vào các biến
   rock = loadImage("img/rock.png");

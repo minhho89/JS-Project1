@@ -8,6 +8,11 @@ body {
   color: white;
   }
 
+#tua-game {
+font-weight: bold;
+color: #ffa500;
+}
+
 .navbar-brand {
   font-family: 'Pacifico', cursive;
   color: yellow !important;
@@ -38,3 +43,6 @@ footer br {
   font-size: 24%;
 
 }
+#wCanvas {
+    width: 731px !important;
+  }
